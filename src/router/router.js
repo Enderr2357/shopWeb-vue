@@ -2,7 +2,7 @@ import * as Vue from 'vue'
 import {
   createRouter, createWebHistory
 } from "vue-router";
-
+import HelloWorld from '../components/world/index.vue'
 
 import SideBar from '../layout/SideBar.vue'
 const router = createRouter({
@@ -10,15 +10,8 @@ const router = createRouter({
   routes: [
     {
       path: '/world',
-      component: SideBar,
-      children: [
-        {
-          path: '/HelloWorld',
-          component: () => import('../components/world/HelloWorld.vue')
-        }
-      ]
+      component: HelloWorld,
     }
-  
   ]
 }
 )
